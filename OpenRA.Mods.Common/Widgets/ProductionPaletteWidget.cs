@@ -144,10 +144,7 @@ namespace OpenRA.Mods.Common.Widgets
 			clock = new Animation(world, ClockAnimation);
 
 			overlayFont = Game.Renderer.Fonts["TinyBold"];
-			if (!Game.Renderer.Fonts.TryGetValue("Symbols", out symbolFont))
-			{
-				symbolFont = Game.Renderer.Fonts["TinyBold"];
-			}
+			Game.Renderer.Fonts.TryGetValue("Symbols", out symbolFont);
 		}
 
 		public override void Initialize(WidgetArgs args)
